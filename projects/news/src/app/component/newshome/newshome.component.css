@@ -1,0 +1,97 @@
+.parent{
+    width: 100%;
+    height: 150vh;
+    margin-top: 80px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows:repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    background: #000;
+}
+.child{
+    cursor: pointer;
+    position: relative;
+}
+.inner-child{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #f6b93b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s all;
+    display: none;
+}
+.inner-child p{
+    font-size: 45px;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-60%);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inner-child:nth-child(2) p{
+    font-size: 40px;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.child:hover .inner-child{
+    display: inline-block;
+}
+.child:nth-child(1){
+    grid-column: 1/3;
+    background:url('../../../assets/business.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.child:nth-child(2){
+    background:url('../../../assets/entertainment.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
+.child:nth-child(3){
+    grid-row: 1/3;
+    grid-column: 4/5;
+    background:url('../../../assets/general.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
+.child:nth-child(4){
+    background:url('../../../assets/health.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
+.child:nth-child(5){
+    background:url('../../../assets/science.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    grid-column: 2/4;
+}
+.child:nth-child(6){
+    background:url('../../../assets/sports.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    grid-column: 1/3;
+}
+
+.child:nth-child(7){
+    grid-column: 3/5;
+    background:url('../../../assets/technology.jpg');
+    background-size: cover;
+    background-position: 100% 100% ;
+    background-repeat: no-repeat;
+}

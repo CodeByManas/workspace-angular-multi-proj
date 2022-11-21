@@ -1,0 +1,146 @@
+<div class="parent">
+    <div class="child">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title style="margin-left: 45%;font-size: 17px; ">
+                        Filter the news by date & by sort
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="dateSection">
+                    <div>
+                        <input type="text" class="keyword" placeholder="Keyword" [(ngModel)]="keyword">
+                    </div>
+                    <div>
+                        <span>From</span>
+                        <input type="date" [(ngModel)]="dateFrom">
+                    </div>
+                    <div>
+                        <span>To</span>
+                        <input type="date" [(ngModel)]="dateTo">
+                    </div>
+                    <select (change)="optionChange($event)">
+                        <option value="relevancy">Relevancy</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="publishedAt">PublishedAt</option>
+                    </select>
+                    <button class="fSearch" (click)="onSearchClick1()">Search</button>
+                </div>
+            </mat-expansion-panel>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header>
+                    <mat-panel-title style="margin-left: 45%;font-size: 17px;text-align: center;">
+                        Get news by Country.
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="dateSection2">
+                    <select (change)="onCountryChange($event)">
+                        <optgroup label="A">
+                            <option value="ar">Argentina</option>
+                            <option value="at">Austria</option>
+                            <option value="au">Australia</option>
+                        </optgroup>
+                        <optgroup label="B">
+                            <option value="be">Belgium</option>
+                            <option value="bg">Bulgaria</option>
+                            <option value="br">	Brazil</option>
+                        </optgroup>
+                        <optgroup label="C">
+                            <option value="ca">Canada</option>
+                            <option value="ch">Switzerland</option>
+                            <option value="cn">China</option>
+                            <option value="co">	Colombia</option>
+                            <option value="cu">Cuba</option>
+                            <option value="cz">Czech Republic</option>
+                        </optgroup>
+                        <optgroup label="D">
+                            <option value="de">Germany</option>
+                        </optgroup>
+                        <optgroup label="E">
+                            <option value="eg">	Egypt</option>
+                        </optgroup>
+                        <optgroup label="F">
+                            <option value="fr">	France</option>
+                        </optgroup>
+                        <optgroup label="G">
+                            <option value="gb">United Kingdom</option>
+                            <option value="gr">Greece</option>
+                        </optgroup>
+                        <optgroup label="H">
+                            <option value="hk">Hong Kong</option>
+                            <option value="hu">Hungary</option>
+                        </optgroup>
+                        <optgroup label="I">
+                            <option value="id">Indonesia</option>
+                            <option value="ie">Ireland</option>
+                            <option value="il">Israel</option>
+                            <option value="in">India</option>
+                            <option value="it">Italy</option>
+                        </optgroup>
+                        <optgroup label="J">
+                            <option value="jp">Japan</option>
+                        </optgroup>
+                        <optgroup label="K">
+                            <option value="kr">Korea (South)</option>
+                        </optgroup>
+                        <optgroup label="L">
+                            <option value="lt">Lithuania</option>
+                            <option value="lv">Latvia</option>
+                        </optgroup>
+                        <optgroup label="M">
+                            <option value="ma">Morocco</option>
+                            <option value="mx">Mexico</option>
+                            <option value="my">Malaysia</option>
+                        </optgroup>
+                        <optgroup label="N">
+                            <option value="ng">Nigeria</option>
+                            <option value="nl">Netherlands</option>
+                            <option value="no">Norway</option>
+                            <option value="nz">New Zealand</option>
+                        </optgroup>
+                        <optgroup label="P">
+                            <option value="ph">Philippines</option>
+                            <option value="pl">Poland</option>
+                            <option value="pt">Portugal</option>
+                        </optgroup>
+                        <optgroup label="R">
+                            <option value="ro">Romania</option>
+                            <option value="rs">Serbia</option>
+                            <option value="ru">Russian Federation</option>
+                        </optgroup>
+                        <optgroup label="S">
+                            <option value="sa">Saudi Arabia</option>
+                            <option value="se">Sweden</option>
+                            <option value="sg">Singapore</option>
+                            <option value="si">Slovenia</option>
+                            <option value="sk">Slovakia</option>
+                        </optgroup>
+                        <optgroup label="T">
+                            <option value="th">Thailand</option>
+                            <option value="tr">Turkey</option>
+                            <option value="tw">Taiwan, Republic of China</option>
+                        </optgroup>
+                        <optgroup label="U">
+                            <option value="ua">Ukraine</option>
+                            <option value="us">United States of America</option>
+                        </optgroup>
+                        <optgroup label="V">
+                            <option value="ve">Venezuela (Bolivarian Republic)</option>
+                        </optgroup>
+                        <optgroup label="Z">
+                            <option value="za">South Africa Country</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title style="margin-left: 45%;font-size: 17px;text-align: center;">
+                        Self aware panel
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>

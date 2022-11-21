@@ -1,0 +1,38 @@
+<form [formGroup]='fValue'>
+    <div>
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Full Name</mat-label>
+            <input matInput type="text" placeholder="Ex : Tony Stark" formControlName='fname' value='fname' required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="Ex. stary@yahoo.com" formControlName='email' required>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Contact</mat-label>
+            <input matInput type="tel" placeholder="Ex : +91 9999999999" formControlName='contact' required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Department</mat-label>
+            <input type="text" matInput placeholder="Ex. Development" formControlName='department' required>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Experience</mat-label>
+            <input matInput type="text" placeholder="Ex : 8 Years" formControlName='experience'>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address</mat-label>
+            <input type="text" matInput placeholder="Ex. Hyderabad" formControlName='address'>
+        </mat-form-field>
+    </div>
+</form>
+
+<div class="btnGroup">
+    <button mat-button class="customBtn" (click)="addEmp()">Save</button>
+<button mat-button mat-dialog-close class="customBtn">Close</button>
+</div>
+

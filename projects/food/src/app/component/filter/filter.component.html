@@ -1,0 +1,28 @@
+<div class="filter">
+    <div style="margin-top:100px ;">
+        <div style="margin: 22px;">
+            <button class="areaBtn" style="border-radius: 20px 0px 0px 20px;" (click)='onRandomMealClick()'>Random Meal</button>
+            <select class="areaBtn" style="border-radius: 0px 20px 20px 0px;height: 34.7px;transform: translateY(-0.5px);" (change)="onAreaOptionChange($event)">
+            <option *ngFor='let area of areaList' [value]="area.strArea">{{area.strArea}}</option>
+        </select>
+        </div>
+        <div>
+            <input type="text" placeholder="Filter meal by name" [(ngModel)]='foodName'>
+            <button class="srchBtn" (click)='onNameClick()'>
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+        <div>
+            <input type="text" placeholder="Filter by ingredient" [(ngModel)]='ingredient'>
+            <button class="srchBtn" (click)='onIngredientClick(ingredient)'>
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+        <div>
+            <input type="text" placeholder="Filter by main area" [(ngModel)]='area'>
+            <button class="srchBtn" (click)="onAreaClick(area)">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

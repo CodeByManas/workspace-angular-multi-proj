@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="card" *ngFor='let item of allCatWithDetails' (click)='onViewClick(item.strCategory)'>
+        <div class="fPic">
+            <img alt="image" [src]="item.strCategoryThumb">
+            <h3 style="clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);">Category : {{item.strCategory}}</h3>
+        </div>
+        <div class="info">
+            <div style="margin-top: 15px;color: #e74c3c;">
+                <h3>Category : {{item.strCategory}}</h3>
+                <p>{{item.strCategoryDescription}}</p>
+            </div>
+            <div class="btnSection">
+                <!-- <button>Wishlist</button>
+                <button >View</button> -->
+            </div>
+        </div>
+    </div>
+</div>

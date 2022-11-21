@@ -1,0 +1,25 @@
+.parent{
+    width: 100%; margin-top: 76px;  display: flex;justify-content: space-evenly;height: 90%;
+    position: relative;
+    background-color: #271302;
+    border-top: 2px solid #ffffff;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 90vh;
+    /* background: #271302; */
+}
+.details{
+    width: 50%;
+    font-size: 13px;
+    margin-top: 50px;
+}
+
+.ingredientImage{
+    display: flex;
+    flex-wrap: wrap;
+    color: #e74c3c;
+}

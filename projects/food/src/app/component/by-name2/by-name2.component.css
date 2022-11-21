@@ -1,0 +1,61 @@
+.parent{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 77px;
+    background: #271302;
+    border-top: 2px solid #ffffff;
+}
+
+.card{
+    width: 400px;
+    min-height: 360px;
+    position: relative;
+    margin-top: 30px;
+    margin: 10px;
+    border: 1.5px solid #e74c3c;
+}
+
+
+.btnSection{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnSection button{
+    transform: translateY(-17px);
+    width: 100px;
+    height: 36px;
+    padding: 6px;
+    border: 1.4px solid #e74c3c;
+    color: #e74c3c;
+    border-radius: 7px;
+    background:  #271302;
+    transition: .1s;
+}
+.btnSection button:hover{
+    color:#fff ;
+    background: #e74c3c;
+}
+
+.info{
+    min-height: 200px;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    color:#e74c3c ;
+    background:#271302 ;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    z-index: 1000;
+    background:#271302 ;
+}

@@ -1,0 +1,25 @@
+<header>
+    <div routerLink='/register'>
+        <h2>Health Bloom</h2><img src="../../../assets/stethoscope.png" alt="stethoscope">
+    </div>
+    <button class="list" routerLink='/register'>Back</button>
+</header>
+<div class="parent">
+    <div class="child1">
+        <div *ngIf='storedData == undefined' class="oopsMsg">
+            <h2>OOP's..No data found.</h2>
+        </div>
+        <div *ngIf='storedData != undefined'>
+            <ul>
+                <li *ngFor='let clinic of storedData;let i = index' (click)='onClinicClick(i)'>{{clinic.clinicName}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="child2" *ngIf='qrcodeBox' >
+        <ngx-qrcode [value]="singleObj" [width]='260'></ngx-qrcode>
+        <h2>Scan this QR code to get clinic details.</h2>
+        <button class="print" (click)="onGoToPrintClick(singleObj)">Go to print</button>
+    </div>
+</div>

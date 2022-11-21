@@ -1,0 +1,30 @@
+<div class="mainSrchField">
+    <mat-drawer-container style="background-color: #271302;margin-top: 10px;">
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+            <app-filter></app-filter>
+        </mat-drawer>
+
+        <div class="example-sidenav-content">
+            <button mat-button type="button" (click)="drawer.toggle()" style="background-color:#e74c3c; border-radius: 20px; color: #fff;"> Filter</button>
+        </div>
+    </mat-drawer-container>
+    <button mat-button class="fStyleBtn" routerLink='/home'>Home</button>
+    <!-- for search field  -->
+    <div>
+        <input type="text" placeholder="Search food by first letter" [(ngModel)]='fletter'>
+    <button class="srchBtn" (click)="getFLetter(fletter)">
+        <mat-icon>search</mat-icon>
+    </button>
+    </div>
+    <!-- for category  -->
+    <select (change)='onOptionChange($event)'>
+        <option [value]="category.strCategory" *ngFor='let category of allCategory'>{{category.strCategory}}</option>
+    </select>
+    
+    <!-- <button mat-button class="fStyleBtn" >Manas Kumar</button> -->
+    <!-- <select>
+        <option>Twitter</option>
+        <option value="">Facebook</option>
+    </select> -->
+    <button mat-button class="fStyleBtn" (click)='apiClick()'>API</button>
+</div>

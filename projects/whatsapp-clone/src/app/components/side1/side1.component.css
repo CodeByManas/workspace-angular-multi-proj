@@ -1,0 +1,176 @@
+.side1{
+    height: 90vh;
+    border-right: 1.4px solid #eeeeee;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.side1Header{
+    width: 100%;
+    height: 65px;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+.avatar{
+    flex-basis: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+.avatar img{
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.actions{
+    flex-basis: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    
+}
+.actions img{
+    height: 20px;
+    width: 20px;
+    margin: auto 8px;
+    cursor: pointer;
+}
+.searchBox{
+    width: 100;
+    height: 45px;
+    background-color:#f7f7f7;
+    border-bottom: 1.4px solid #eeeeee;
+    display: flex;
+    padding-bottom: 6.4px;
+}
+input[type='text']{
+    width: 87%;
+    height:32px;
+    margin-top: 6px;
+    margin-left: -3px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 40px;
+    box-shadow: .8px .8px 2px #cfcfcf;
+    color: #a4a4a4;
+    background-color: #f0f2f5;
+}
+mat-icon{
+    color: #5c6d77;
+    position:relative;
+    top: 12px;
+    left: 40px;
+    font-size: 22px;
+    
+}
+::placeholder{
+    padding-left: 5px;
+    font-size: 13px;
+    color: #5c6d77;
+}
+.noConversation{
+    text-align: center;
+    padding: 20px;
+    color: #b9b9b9;
+    font-weight: 400;
+}
+.side1Content{
+    overflow-y: scroll;
+    
+   
+   
+}
+
+/* Scroll design part  */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #919191;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(122, 122, 122);  
+}
+
+.conversation{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    border-bottom: 1.5px solid#f2f2f2;
+    padding-top: 8px;
+}
+.conversation:hover{
+    background-color: #f0f2f5;
+    cursor: pointer;
+}
+.conversation .DP{
+    flex-basis: 73px;
+    height: 100%;
+    display: flex;
+}
+.DP img{
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.conversation .msg{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.converHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.msgDetails{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    width:250px;
+   
+}
+.nameNmsg{
+    display: flex;
+    flex-direction: column;
+}
+.nameNmsg p{
+    margin-bottom: 7px;
+
+}
+p:nth-child(1){
+    font-weight: 500;
+    font-size: 14px;
+    color: #040404;
+}
+p:nth-child(2){
+    font-size: 12px;
+    color: #5c6d77;
+    display: flex;
+    align-items: center;
+}
+.time{
+    transform: translateX(15px);
+    color: #5c6d77;
+    font-size: 12px;
+}

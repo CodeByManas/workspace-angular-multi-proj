@@ -1,0 +1,27 @@
+<div class="side2">
+  <div class="whenNothing" *ngIf="showHide">
+    <img src="../../../assets/whatsapp.png" alt="" />
+    <h2>Keep your phone connected</h2>
+    <p >
+      WhatsApp connects to your phone to sync messages. To reduce data usage,
+      connect your phone to Wi-Fi.
+    </p>
+    <div style="display: flex;align-items: center;">
+        <img src="../../../assets/mac.png" style="width: 35px;" alt="">
+        <h5>Make calls from desktop with WhatsApp for Windows.<a href="">Get it here</a></h5>
+    </div>
+  </div>
+
+  <div class="chat" *ngIf="!showHide">
+      <div class="header">
+        <img src="" alt="">
+        <div></div>
+      </div>
+      <div class="body"></div>
+      <div class="footer">
+        <img src="../../../assets/smiley.png" alt="">
+        <input type="text" name="" id="">
+        <img src="../../../assets/mic.png" alt="">
+      </div>
+  </div>
+</div>

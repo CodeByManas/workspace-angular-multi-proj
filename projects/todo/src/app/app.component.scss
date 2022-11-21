@@ -1,0 +1,54 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f6fa;
+
+    .child1{
+        float: left;
+        width: 30vw;
+
+        .inputField{
+            display: flex;
+            // flex-direction: column;
+            justify-content: space-between;
+
+            .addBtn{
+                background:linear-gradient(135deg, #F97F51,#F8EFBA) ;
+                color: rgb(0, 0, 0);
+                width: 70px;
+                height: 70px;
+                border: 1.5px solid #F8EFBA;
+                border-radius: 50%;
+                margin: 10px 10px;
+                transition: .1s;
+                font-weight: 500;
+                font-size: 50px;
+                z-index: 1000;
+            }
+            .addBtn:hover{
+                transform: scale(1.1)
+                // background: rgb(63, 63, 63);;
+                // color:#F8EFBA;
+                // border: 1.5px solid #F8EFBA;
+            }
+        }
+        
+    }
+    .child2{
+        float: right;
+        width: 70vw;
+        height: 90vh;
+        box-shadow: inset 4px 0px 8px rgb(240, 240, 240) ;
+        // border-radius: 100px 0px 0px 100px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #F97F51,#F8EFBA);
+        // overflow: scroll;
+    }
+
+    .Xstyle:hover{
+        transform: scale(1.3);
+    }
+}

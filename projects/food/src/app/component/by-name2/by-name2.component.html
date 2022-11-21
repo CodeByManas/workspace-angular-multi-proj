@@ -1,0 +1,21 @@
+<app-srchnavbar></app-srchnavbar>
+
+<div class="parent">
+    <div class="card" *ngFor='let item of renderByName'>
+        <img [src]="item.strMealThumb" alt="image" style="width: 400px; height: 350px;">
+        <div class="info">
+            <div style="margin: 20px auto;">
+                <p *ngIf='item.strMeal'>Food name: {{item.strMeal}}</p>
+                <p *ngIf='item.strCategory'>Category : {{item.strCategory}}</p>
+                <p *ngIf='item.strArea'>Country : {{item.strArea}}</p>
+            </div>
+
+            <div class="btnSection">
+                <!-- <button>Favorite</button> -->
+                <button (click)='getIngredientImage(item.strMeal)'>View ingredient</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

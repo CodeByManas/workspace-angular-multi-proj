@@ -1,0 +1,35 @@
+<div class="parent">
+  <div class="child">
+    <input class="inputField" type="text" placeholder="Enter City" [(ngModel)]='input' (change)='onInputChange()'> <img
+      class="search" src="../assets/search.png" style="width: 30px;height: 30px;" alt="search">
+      <div *ngIf='status' style="position: absolute; top: 180px;left: 120px;letter-spacing: 1px;">
+        <h3>Enter a city to get result.</h3>
+      </div>
+      <div *ngIf='errorStatus' style="position: absolute; top: 180px;left: 120px;letter-spacing: 1px;">
+        <h3>Enter a valid City.</h3>
+      </div>
+    <div class="cityInfo" *ngIf='!errorStatus'>
+      <h3><img *ngIf='getAPIData.name' src="../assets/city.png" style="width: 27px; height: 27px;" alt="">
+        {{getAPIData.name}} ({{getAPIData.main.temp}} °Cel )</h3>
+      <h3>{{getAPIData.sys.country}}</h3>
+    </div>
+    
+    <div class="info" *ngIf='!errorStatus'>
+      <div>
+        <p>Latitude- {{getAPIData.coord.lat}}</p>
+        <p>Longitude- {{getAPIData.coord.lon}}</p>
+        <p>Des - {{getAPIData.weather[0].description}}</p>
+        <p>Temp. Max- {{getAPIData.main.temp_max}} °C</p>
+        <p>Temp. Min- {{getAPIData.main.temp_min}} °C</p>
+      </div>
+      <div>
+        <p>Pressure - {{getAPIData.main.pressure}} Pa</p>
+        <p>Humidity - {{getAPIData.main.humidity}}</p>
+        <p>Wind speed -{{getAPIData.wind.speed}} kmph</p>
+        <p>Sunrise {{getAPIData.sys.sunrise}}</p>
+        <p>Sunset {{getAPIData.sys.sunset}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,152 @@
+<header>
+    <div>
+     <h2>Health Bloom</h2> <img src="../../../assets/stethoscope.png" alt="stethoscope">
+    </div>
+     <button class="list" routerLink='/register'>Back</button>
+ </header>
+
+<div class="parent">
+    <button class="list" routerLink='/result'>List</button>
+    <div class="child">
+        <form #f='ngForm' (ngSubmit)='submitForm(f)'>
+            <div class="messege" *ngIf='submitted && f.form.controls["clinicName"].status == "INVALID"'>
+                <p *ngIf='submitted && f.form.controls["clinicName"].errors && f.form.controls["clinicName"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["clinicName"].errors && f.form.controls["clinicName"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="clinicName" 
+            #clinicName='ngModel' 
+            [(ngModel)]=' registerDetails.clinicName' 
+            placeholder="Clinic Name"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <!-- first field end  -->
+            <div  class="messege">
+                <p *ngIf='submitted && f.form.controls["city"].errors && f.form.controls["city"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["city"].errors && f.form.controls["city"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="city" 
+            #city='ngModel' 
+            [(ngModel)]=' registerDetails.city' 
+            placeholder="City"
+            autocomplete="off"
+            required
+            minlength="4"
+            >
+            <!-- Second field end  -->
+            <div  class="messege">
+                <p *ngIf='submitted && f.form.controls["province"].errors && f.form.controls["province"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["province"].errors && f.form.controls["province"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="province" 
+            #province='ngModel' 
+            [(ngModel)]=' registerDetails.province' 
+            placeholder="Province"
+            autocomplete="off"
+            minlength="5"
+            required
+            >
+            <!-- Third field end  -->
+            <div  class="messege">
+                <p *ngIf='submitted && f.form.controls["postalCode"].errors && f.form.controls["postalCode"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["postalCode"].errors && f.form.controls["postalCode"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="postalCode" 
+            #postalCode='ngModel' 
+            [(ngModel)]=' registerDetails.postalCode' 
+            placeholder="Postal Code"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <!-- Fourth field end  -->
+            <div class="messege">
+                <p *ngIf='submitted && f.form.controls["clinicFax"].errors && f.form.controls["clinicFax"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["clinicFax"].errors && f.form.controls["clinicFax"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="clinicFax" 
+            #clinicFax='ngModel' 
+            [(ngModel)]=' registerDetails.clinicFax' 
+            placeholder="Clinic Fax"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <!-- Fifth field end  -->
+            <div class="messege">
+                <p *ngIf='submitted && f.form.controls["latitude"].errors && f.form.controls["latitude"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["latitude"].errors && f.form.controls["latitude"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="latitude" 
+            #latitude='ngModel' 
+            [(ngModel)]=' registerDetails.latitude' 
+            placeholder="Latitude"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <!-- Sixth field end  -->
+            <div class="messege">
+                <p *ngIf='submitted && f.form.controls["longitude"].errors && f.form.controls["longitude"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["longitude"].errors && f.form.controls["longitude"].errors["minlength"] '>Name is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="longitude" 
+            #longitude='ngModel' 
+            [(ngModel)]=' registerDetails.longitude' 
+            placeholder="Longitude"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <!-- Seventh field end  -->
+            <div class="messege">
+                <p *ngIf='submitted && f.form.controls["address1"].errors && f.form.controls["address1"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["address1"].errors && f.form.controls["address1"].errors["minlength"] '>Address is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="address1" 
+            #address1='ngModel' 
+            [(ngModel)]=' registerDetails.address1' 
+            placeholder="Address Line1"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <!-- Eight field end  -->
+            <div class="messege">
+                <p *ngIf='submitted && f.form.controls["address2"].errors && f.form.controls["address2"].errors["required"] '>Field is required</p>
+                <p *ngIf='submitted && f.form.controls["address2"].errors && f.form.controls["address2"].errors["minlength"] '>Address is too short</p>
+            </div>
+            <input 
+            type="text" 
+            name="address2" 
+            #address2='ngModel' 
+            [(ngModel)]=' registerDetails.address2' 
+            placeholder="Address Line2"
+            autocomplete="off"
+            required
+            minlength="5"
+            >
+            <br>
+            <div class="btnSec">
+                <button>Save</button>
+            </div>
+        </form>
+    </div>
+</div>

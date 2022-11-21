@@ -1,0 +1,21 @@
+mat-form-field{
+    margin: auto 9px;
+}
+
+.btnGroup{
+    display: flex;
+    justify-content: space-between;
+
+    .customBtn{
+        border: 1px solid #9b59b6;
+        color: #9b59b6;
+        transition: .1s;
+        width: 80px;
+        margin: auto 9px;
+    }
+    .customBtn:hover{
+        color: #fff;
+        background-color: #9b59b6;
+    }
+    
+}

@@ -1,0 +1,36 @@
+<div class="side1">
+  <div class="side1Header">
+    <div class="avatar">
+      <img src="../../../assets/nopic.svg" alt="DP" />
+    </div>
+    <div class="actions">
+      <img src="../../../assets/status.svg" alt="" />
+      <img src="../../../assets/chat.svg" alt="" />
+      <img src="../../../assets/more.svg" alt="" />
+    </div>
+  </div>
+  <div class="searchBox">
+    <mat-icon>search</mat-icon>
+    <input type="text" placeholder=" Search or start the new chat" />
+  </div>
+  <div class="side1Content">
+    <!-- <div class="noConversation">All chats are archived.</div> -->
+
+    <div *ngFor="let item of conversation" class="conversation" (click)="chatClicked(item)">
+      <div class="DP">
+        <img src="../../../assets/nopic.svg" alt="" />
+      </div>
+      <div class="msgDetails">
+        <div class="nameNmsg">
+          <p>{{item.name}}</p>
+          <p>
+            <img *ngIf="item.status" src="../../../assets/bluetick.svg" alt="">
+            <img *ngIf="!item.status" src="../../../assets/greytick.svg" alt="">
+            {{item.latestmsg}}</p>
+        </div>
+        <div class="time">{{item.time}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>

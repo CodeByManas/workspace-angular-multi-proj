@@ -1,0 +1,23 @@
+<app-srchnavbar></app-srchnavbar>
+<div class="parent" *ngIf='byFirstLetter!= null'>
+    <div class="card" *ngFor='let item of byFirstLetter;let i = index'>
+        <img [src]="item.strMealThumb" alt="image" style="width: 400px; height: 350px;">
+        <div class="info">
+            <div style="margin: 20px auto;">
+                <p *ngIf='item.strMeal'>Food name: {{item.strMeal}}</p>
+                <p *ngIf='item.strCategory'>Category : {{item.strCategory}}</p>
+                <p *ngIf='item.strArea'>Country : {{item.strArea}}</p>
+            </div>
+
+            <div class="btnSection">
+                <!-- <button>Favorite</button> -->
+                <button (click)='getIngredientImage(item.strMeal)'>View ingredient</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf='byFirstLetter === null' style="display: flex; justify-content: center; align-items: center;height: 100%;background:  #271302;">
+    <div>
+        <h1 style="color: #fff;">Oops, No result found</h1>
+    </div>
+</div>

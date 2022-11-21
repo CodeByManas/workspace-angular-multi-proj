@@ -1,0 +1,43 @@
+.parent{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    background: #000;
+
+}
+.child{
+    width: 400px;
+    height: 300px;
+    border: none;
+    border-radius: 5px;
+    margin: 4px auto;
+    padding: 18px;
+    background: #f6b93b;
+    
+}
+.child:hover{
+    background: #c28f2a;
+    cursor: pointer;
+}
+.child h2, p{
+    margin: 10px;
+}
+.details{
+    margin-top: 10px;
+    text-align: center;
+}
+.details p{
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.details p:nth-child(4){
+    color: blue;
+    cursor: pointer;
+}

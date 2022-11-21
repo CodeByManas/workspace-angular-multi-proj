@@ -1,0 +1,35 @@
+<div *ngIf='!hideShow'>
+    <table class="table table-hover">
+        <thead class="headStyle">
+            <tr>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Contact</td>
+                <td>Department</td>
+                <td>Experience</td>
+                <td>Address</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let item of allEmployeeData'>
+                <td>{{item.fname}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.contact}}</td>
+                <td>{{item.department}}</td>
+                <td>{{item.experience}}</td>
+                <td>{{item.address}}</td>
+                <td>
+                    <button mat-button class="customBtn" (click)='editEmployeeData(item)'>Edit</button>
+                    <button mat-button class="customBtn" (click)='deletEmp(item)'>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf='hideShow'>
+    <h2>Opps ! 😞 No data found. Add some data.</h2>
+</div>
+
+<button mat-button mat-dialog-close class="customBtn">Close</button>

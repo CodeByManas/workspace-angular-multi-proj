@@ -1,0 +1,18 @@
+<header>
+    <div routerLink='/register'>
+        <h2>Health Bloom</h2><img src="../../../assets/stethoscope.png" alt="stethoscope">
+    </div>
+    <button class="list" routerLink='/result'>Back</button>
+</header>
+<div class="parent">
+    <div class="child" *ngIf="show">
+        <h1>{{convertToObject.clinicName}}</h1>
+        <ngx-qrcode [value]="printQR" [width]='260'></ngx-qrcode>
+        <h1>Scan this QR code to get the data.</h1>
+
+        <button class="print" (click)="onPrintClick()">Print</button>
+    </div>
+    <!-- <div *ngIf="show" class="errorMsg">
+        <h2>Oop's ! No data found.</h2>
+    </div> -->
+</div>

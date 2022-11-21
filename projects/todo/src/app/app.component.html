@@ -1,0 +1,39 @@
+<div class="parent" style="background-color: rgb(63, 63, 63);">
+
+    <div class="child1">
+        <div style="color: #F8EFBA; text-align: center; transform: translateY(-200px);">
+            <h1>My ToDo
+                🖊</h1>
+        </div>
+
+        <div class="inputField">
+            <div style="margin: auto 10px; width: 200px;">
+                <input matInput type="text" [(ngModel)]='todoItem'
+                    style="border: 1.5px solid rgb(63, 63, 63);height: 40px;width: 299px; border-radius: 10px 0px 0px 10px;background-color: rgb(63, 63, 63); border: 1.5px solid #F8EFBA;border-right: none;">
+            </div>
+            <div>
+                <button mat-stroked-button class="addBtn" (click)='addItem()'>+</button>
+            </div>
+        </div>
+    </div>
+    <div class="child2">
+        <h1 style="text-align: center;margin: 10px auto;"> 😊 TODO LIST 😊</h1>
+        <div style="display: flex; justify-content: space-evenly; margin-top: 30px;">
+            <div style="width: 500px;">
+                <div *ngIf='show' style="display: flex;justify-content: center;align-items: center; height: 60vh;">
+                    <h2>No list found, Add few.</h2>
+                </div>
+                <ul *ngFor='let item of allTodoItems;let i = index' style="list-style: none; font-size: 20px; margin-left: 130px;">
+                    <li style="margin: 10px auto;">
+                        <button class="Xstyle" style="background-color: transparent; border: none; font-size: 20px; cursor: pointer;"
+                            (click)='removeItem(i)'>
+                            ❌</button> {{item}}
+                    </li>
+                </ul>
+            </div>
+            <div style="display: flex; justify-content: center;align-items: center; width: 250px;height: 250px;">
+                <img src="../assets/note.png" alt="logo" style="width: 200px;height: 200px;">
+            </div>
+        </div>
+    </div>
+</div>

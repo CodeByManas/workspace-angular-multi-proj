@@ -1,0 +1,14 @@
+<div class="parent">
+    <div *ngFor="let item of category" class="child">
+        <h2>{{item.name}}</h2>
+        <p>Category : {{item.category | uppercase}}</p>
+        <div class="details">
+            <p>{{item.description}}</p>
+            <p>Language : {{item.language}}</p>
+            <p>Country : {{item.country}}</p>
+            <p>More : {{item.url}}</p>
+        </div>
+   
+    </div>
+</div>
+<!-- <p>{{category | json}}</p> -->

@@ -1,0 +1,34 @@
+.parent{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+}
+mat-card{
+    margin: 8px auto;
+    width: 48%;
+    min-height: 300px;
+    background: #f6b93b;
+    padding: 20px;
+}
+mat-card-content p{
+    font-size: 16.5px;
+}
+mat-card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.countSection{
+    width: 100%;
+    height: 40px;
+    border-top: 1.5px solid black;
+    background: linear-gradient(#f6b93b, #fff, #f6b93b);
+    text-align: center;
+}
+.countSection p{
+    font-size: 16px;
+    line-height: 40px;
+    color: #000;
+}

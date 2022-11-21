@@ -1,0 +1,78 @@
+
+.parent{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background:  #271302;
+}
+
+.card{
+    width: 400px;
+    min-height: 300px;
+    position: relative;
+    margin: 10px;
+    transition: .1s;
+    background:linear-gradient(130deg,rgba(0,0,0,0.1), rgba(173, 173, 173, 0.2),rgba(0,0,0,0.1)) ;
+    /* background: transparent; */
+    backdrop-filter: blur(2px);
+    border: .8px solid rgb(151, 151, 151);
+    cursor: pointer;
+}
+.card:hover .info{
+    display: inline-block;
+}
+.card:hover .fPic{
+    display: none;
+}
+
+.btnSection{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnSection button{
+    width: 100px;
+    height: 36px;
+    padding: 6px;
+    border: 1.4px solid #e74c3c;
+    color: #e74c3c;
+    border-radius: 7px;
+    background:  transparent;
+    transition: .1s;
+}
+.btnSection button:hover{
+    color:#fff ;
+    background: #e74c3c;
+}
+
+.info{
+    min-height: 400px;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    color:#e74c3c ;
+    background:linear-gradient(130deg,rgba(0,0,0,0.1), rgba(0,0,0,0.1)) ;
+    backdrop-filter: blur(1.2px);
+    /* background:#271302 ; */
+    display: none;
+}
+.info p{
+    color: #ffffff;
+}
+.fPic h3{
+    position: absolute;
+    bottom: 3px;
+    width: 50%;
+    height: 30px;
+    padding: 10px auto;
+    background:#e74c3c ;
+    color: #ffffff;
+}
+
